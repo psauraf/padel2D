@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padel2D</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: #f0f0f0;
+            margin: 0;
+            height: 100vh;
+        }
+        #miCanvas {
+            background: #eee;
+            display: block;
+            margin: 20px auto;
+        }
+        .marcador {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px;
+            padding: 10px;
+            background: #2e8b57;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            border: 2px solid white;
+        }
+        .puntuacion {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            font-family: 'Press Start 2P', cursive;
+        }
+        .marcador div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #mensajeVictoria {
+            display: none;
+            font-size: 30px;
+            color: red;
+            margin-top: 20px;
+            font-family: 'Press Start 2P', cursive;
+        }
+    </style>
+</head>
+<body>
+    <div class="marcador">
+        <div>
+            <div class="puntuacion" id="puntuacionIzquierda">Puntos: 0</div>
+            <div class="puntuacion" id="juegosIzquierda">Juegos: 0</div>
+        </div>
+        <div>
+            <div class="puntuacion" id="puntuacionDerecha">Puntos: 0</div>
+            <div class="puntuacion" id="juegosDerecha">Juegos: 0</div>
+        </div>
+    </div>
+    <canvas id="miCanvas" width="1000" height="650"></canvas>
+    <div id="mensajeVictoria">¡ENHORABUENA! HAS GANADO EL PARTIDO</div>
+    <script src="script.js"></script>
+</body>
+</html>
